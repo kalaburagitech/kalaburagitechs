@@ -42,7 +42,7 @@ const AboutSectionTwo = () => {
                   Dedicated Support
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                  Our commitment to your success doesn't end with project
+                  Our commitment to your success doesn&apos;t end with project
                   delivery. We provide ongoing support and maintenance to ensure
                   your software continues to perform optimally and evolve with
                   your business needs.
