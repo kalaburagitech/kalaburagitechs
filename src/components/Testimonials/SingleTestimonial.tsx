@@ -15,6 +15,11 @@ const StarIcon = () => (
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   const { star, name, image, content, designation } = testimonial;
 
+  // Utility function to escape single/double quotes
+  const escapeQuotes = (str: string) => {
+    return str.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+  };
+
   return (
     <div className="w-full">
       <div
@@ -27,7 +32,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
           ))}
         </div>
         <p className="mb-8 border-b border-gray-200 pb-8 text-base leading-relaxed text-gray-600 dark:border-gray-700 dark:text-gray-300">
-          "{content}"
+          "{escapeQuotes(content)}"
         </p>
         <div className="flex items-center">
           <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
