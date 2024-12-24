@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Flexible Pricing for Your Software Needs"
+          paragraph="Choose the perfect plan for your project. Whether you're a startup or an enterprise, we have a solution that fits your budget and requirements."
           center
           width="665px"
         />
@@ -23,7 +23,7 @@ const Pricing = () => {
               onClick={() => setIsMonthly(true)}
               className={`${
                 isMonthly
-                  ? "pointer-events-none text-primary"
+                  ? "pointer-events-none text-[#FF8C00]"
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
@@ -38,7 +38,7 @@ const Pricing = () => {
                 <div
                   className={`${
                     isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
+                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-[#FF8C00] transition`}
                 >
                   <span className="active h-4 w-4 rounded-full bg-white"></span>
                 </div>
@@ -49,7 +49,7 @@ const Pricing = () => {
               className={`${
                 isMonthly
                   ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
+                  : "pointer-events-none text-[#FF8C00]"
               } ml-4 cursor-pointer text-base font-semibold`}
             >
               Yearly
@@ -59,43 +59,43 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Startup"
+            price={isMonthly ? "999" : "9999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Perfect for small teams and startups looking to establish their digital presence."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Custom Web Application" status="active" />
+            <OfferList text="Responsive Design" status="active" />
+            <OfferList text="Basic SEO Optimization" status="active" />
+            <OfferList text="1 Month Free Maintenance" status="active" />
+            <OfferList text="24/7 Support" status="inactive" />
+            <OfferList text="Advanced Analytics" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Growth"
+            price={isMonthly ? "2999" : "29999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Ideal for growing businesses requiring more advanced features and support."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Custom Web & Mobile Apps" status="active" />
+            <OfferList text="Advanced UI/UX Design" status="active" />
+            <OfferList text="E-commerce Integration" status="active" />
+            <OfferList text="3 Months Free Maintenance" status="active" />
+            <OfferList text="24/7 Priority Support" status="active" />
+            <OfferList text="Advanced Analytics" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Enterprise"
+            price={isMonthly ? "5999" : "59999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Comprehensive solution for large-scale enterprises with complex requirements."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Custom Enterprise Solutions" status="active" />
+            <OfferList text="Multi-platform Development" status="active" />
+            <OfferList text="AI & ML Integration" status="active" />
+            <OfferList text="6 Months Free Maintenance" status="active" />
+            <OfferList text="24/7 Dedicated Support" status="active" />
+            <OfferList text="Advanced Analytics & Reporting" status="active" />
           </PricingBox>
         </div>
       </div>
@@ -137,8 +137,8 @@ const Pricing = () => {
               y2="1131.65"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#FF8C00" />
+              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_93:235"
@@ -148,8 +148,8 @@ const Pricing = () => {
               y2="915.952"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#FF8C00" />
+              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>

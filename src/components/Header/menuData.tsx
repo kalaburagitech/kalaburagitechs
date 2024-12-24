@@ -80,5 +80,13 @@ const menuData: Menu[] = [
       },
     ],
   },
+  // New "Our Experts" menu item
+  {
+    id: 5,
+    title: "Our Experts",
+    path: "/our-experts",
+    newTab: false,
+  },
 ];
+
 export default menuData;
