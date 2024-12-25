@@ -15,7 +15,11 @@ const Hero = () => {
                   KalaburagiTech: Innovative Software Solutions from Bengaluru
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  KalaburagiTech is one of the best startup companies located in Bengaluru, offering a wide range of software development services. With our beautiful work environment and skilled team, we build and develop all types of software solutions to meet your business needs.
+                  KalaburagiTech is one of the best startup companies located in
+                  Bengaluru, offering a wide range of software development
+                  services. With our beautiful work environment and skilled
+                  team, we build and develop all types of software solutions to
+                  meet your business needs.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
@@ -25,7 +29,7 @@ const Hero = () => {
                     Get in Touch
                   </Link>
                   <Link
-                    href="#services"
+                    href="/servicespage"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Our Services
@@ -282,5 +286,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
