@@ -1,93 +1,130 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
+import { Code, Cpu, Globe, Lightbulb, PenTool, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface Expert {
   name: string;
   role: string;
-  image: string;
+  icon: React.ReactNode;
   info: string;
 }
 
 const experts: Expert[] = [
   {
     name: "Santosh S",
-    role: "Full Stack expert",
-    image: "/images/experts/logo.png",
+    role: "Full Stack Expert",
+    icon: <Globe className="h-8 w-8" />,
     info: "Santosh is a seasoned full-stack developer with over 1+ years of experience in building scalable web applications.",
   },
   {
     name: "Nitin W",
     role: "Web Developer Expert",
-    image: "/images/experts/Nitin.png",
+    icon: <Code className="h-8 w-8" />,
     info: "Nitin specializes in front-end technologies and has a keen eye for creating intuitive user interfaces.",
   },
   {
     name: "Rahul B",
     role: "DevOps Expert",
-    image: "/images/experts/Rahul.png",
+    icon: <Rocket className="h-8 w-8" />,
     info: "Rahul is passionate about streamlining development processes and has implemented CI/CD pipelines for numerous projects.",
   },
   {
     name: "Shashank G",
     role: "Machine Learning Expert",
-    image: "/images/experts/no-image.png",
+    icon: <Cpu className="h-8 w-8" />,
     info: "Shashank has a PhD in Computer Science and specializes in developing cutting-edge machine learning algorithms.",
   },
   {
     name: "Rakesh J",
     role: "UI/UX Design Expert",
-    image: "/images/experts/no-image.png",
+    icon: <PenTool className="h-8 w-8" />,
     info: "Rakesh combines creativity with user-centric design principles to create engaging and accessible digital experiences.",
   },
   {
     name: "Gowtami Reddy",
     role: "Digital Marketing Expert",
-    image: "/images/experts/dowtami.png",
+    icon: <Lightbulb className="h-8 w-8" />,
     info: "Gowtami is a digital marketing guru with expertise in SEO, content strategy, and social media marketing.",
   },
 ];
 
-const ExpertCard: React.FC<Expert> = ({ name, role, image, info }) => (
-  <div className="perspective group h-[400px] w-full">
-    <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-      <div className="absolute inset-0">
-        <div className="relative h-full w-full overflow-hidden rounded-lg bg-white shadow-md dark:bg-gray-800">
-          <Image
-            src={image}
-            alt={name}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-300 ease-in-out group-hover:scale-110"
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#FF8C00] p-10 text-white">
-            <h3 className="text-xl font-semibold">{name}</h3>
-            <p>{role}</p>
-          </div>
+const ExpertCard: React.FC<Expert> = ({ name, role, icon, info }) => (
+  <motion.div
+    className="group overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg dark:bg-gray-800"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <div className="p-6">
+      <motion.div
+        className="mb-4 flex justify-center"
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="rounded-full bg-orange-100 p-3 text-orange-600 transition-all duration-300 group-hover:bg-orange-600 group-hover:text-white dark:bg-gray-700 dark:text-orange-400 dark:group-hover:bg-orange-500 dark:group-hover:text-gray-900">
+          {icon}
         </div>
-      </div>
-      <div className="absolute inset-0 h-full w-full overflow-hidden rounded-lg bg-[#FF8C00] p-6 text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-        <div className="flex h-full flex-col items-center justify-center text-center">
-          <h3 className="mb-2 text-2xl font-bold">{name}</h3>
-          <p className="mb-4 text-lg font-semibold">{role}</p>
-          <p className="text-sm">{info}</p>
-        </div>
-      </div>
+      </motion.div>
+      <motion.h3
+        className="font-playfair mb-2 text-center text-2xl font-bold text-gray-900 dark:text-white"
+        whileHover={{ scale: 1.1 }}
+      >
+        <span className="bg-gradient-to-r from-orange-400 to-pink-600 bg-clip-text text-transparent">
+          {name}
+        </span>
+      </motion.h3>
+      <p className="font-montserrat mb-4 text-center text-sm font-medium text-orange-600 dark:text-orange-400">
+        {role}
+      </p>
+      <p className="font-montserrat text-center text-sm text-gray-600 dark:text-gray-300">
+        {info}
+      </p>
     </div>
-  </div>
+  </motion.div>
 );
 
 const OurExperts: React.FC = () => {
   return (
-    <section className="bg-gray-100 py-16 dark:bg-gray-900">
+    <section className="bg-gray-50 py-16 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-          Our Experts
-        </h2>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="relative mb-12 text-center">
+          <motion.h2
+            className="font-playfair relative z-10 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Our Experts
+          </motion.h2>
+          <motion.div
+            className="absolute left-1/2 top-0 -translate-x-1/2 transform text-8xl font-bold text-orange-200 dark:text-orange-900"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          ></motion.div>
+        </div>
+        <motion.p
+          className="font-montserrat mx-auto mb-12 max-w-2xl text-center text-gray-600 dark:text-gray-400"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Meet our team of seasoned professionals, each bringing unique
+          expertise to drive your projects to success.
+        </motion.p>
+        <motion.div
+          className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           {experts.map((expert, index) => (
             <ExpertCard key={index} {...expert} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

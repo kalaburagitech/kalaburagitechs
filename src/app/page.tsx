@@ -13,9 +13,23 @@ import OurExperts from "@/components/experts/our-experts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KalaburagiTech",
-  description: "KalaburagiTech: Innovative Software Solutions ",
-  // other metadata
+  title: "KalaburagiTech | Innovative Software Solutions",
+  description:
+    "KalaburagiTech provides cutting-edge software solutions for all your needs.",
+  keywords: "KalaburagiTech, Software Solutions, Web Development, Projects",
+  openGraph: {
+    title: "KalaburagiTech | Innovative Software Solutions",
+    description: "Explore top-notch software solutions at KalaburagiTech.",
+    url: "https://kalaburagitech.com",
+    images: [
+      {
+        url: "homeimg.png",
+        width: 800,
+        height: 600,
+        alt: "KalaburagiTech Logo",
+      },
+    ],
+  },
 };
 
 export default function Home() {
