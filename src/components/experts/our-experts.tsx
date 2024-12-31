@@ -25,10 +25,10 @@ const experts: Expert[] = [
     info: "Nitin specializes in front-end technologies and has a keen eye for creating intuitive user interfaces.",
   },
   {
-    name: "Rahul B",
-    role: "DevOps Expert",
+    name: "Rajeshwari M",
+    role: "MERN Full stack",
     icon: <Rocket className="h-8 w-8" />,
-    info: "Rahul is passionate about streamlining development processes and has implemented CI/CD pipelines for numerous projects.",
+    info: "Rajeshwari M is passionate about streamlining development processes and has implemented CI/CD pipelines for numerous projects.",
   },
   {
     name: "Shashank G",
