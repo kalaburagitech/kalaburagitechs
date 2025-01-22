@@ -19,7 +19,7 @@ const projects: Project[] = [
     category: "Web Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/ecommerce-platform",
-    demoLink: "https://ecommerce-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Corporate Website",
@@ -28,7 +28,7 @@ const projects: Project[] = [
     category: "Web Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/corporate-website",
-    demoLink: "https://corporate-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Task Management App",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     category: "Mobile Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/task-management-app",
-    demoLink: "https://task-app-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Fitness Tracker App",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     category: "Mobile Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/fitness-tracker-app",
-    demoLink: "https://fitness-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Inventory Management System",
@@ -55,7 +55,7 @@ const projects: Project[] = [
     category: "Software Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/inventory-system",
-    demoLink: "https://inventory-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "CRM Software",
@@ -64,7 +64,7 @@ const projects: Project[] = [
     category: "Software Application",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/crm-software",
-    demoLink: "https://crm-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Image Recognition AI",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     category: "Machine Learning",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/image-recognition-ai",
-    demoLink: "https://ai-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
     name: "Predictive Analytics Tool",
@@ -82,7 +82,7 @@ const projects: Project[] = [
     category: "Machine Learning",
     youtubeId: "dQw4w9WgXcQ",
     githubLink: "https://github.com/yourusername/predictive-analytics",
-    demoLink: "https://analytics-demo.yourdomain.com",
+    demoLink: "https://kalaburagitech.com/servicespage",
   },
 ];
 
