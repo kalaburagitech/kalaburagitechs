@@ -58,7 +58,7 @@ export default function Home() {
       <Pricing />
       <OurExperts />
       <Blog />
-      <Contact />
+      <Contact /> 
     </>
   );
 }
