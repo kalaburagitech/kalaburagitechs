@@ -97,7 +97,7 @@ const OurExperts: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Our Experts
+            Meet Our Software Development Experts
           </motion.h2>
           <motion.div
             className="absolute left-1/2 top-0 -translate-x-1/2 transform text-8xl font-bold text-orange-200 dark:text-orange-900"

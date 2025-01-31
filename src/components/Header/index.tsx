@@ -35,7 +35,31 @@ const Header = () => {
     }
   };
 
-  const usePathName = usePathname();
+  const pathname = usePathname();
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        navbarOpen &&
+        !event.target.closest("#navbarCollapse") &&
+        !event.target.closest("#navbarToggler")
+      ) {
+        setNavbarOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navbarOpen]);
+
+  // Function to close menu
+  const closeMenu = () => {
+    setNavbarOpen(false);
+    setOpenIndex(-1);
+  };
 
   return (
     <>
@@ -51,9 +75,7 @@ const Header = () => {
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-2 lg:py-2" : "py-4"
-                }`}
+                className={`header-logo block w-full ${sticky ? "py-2 lg:py-2" : "py-4"}`}
               >
                 <div className="flex items-center">
                   <span className="text-xl font-bold text-[#FF8C00]">
@@ -104,10 +126,11 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path
+                              pathname === menuItem.path
                                 ? "text-[#FF8C00] dark:text-white"
                                 : "text-dark hover:text-[#FF8C00] dark:text-white/70 dark:hover:text-white"
                             }`}
+                            onClick={closeMenu}
                           >
                             {menuItem.title}
                           </Link>
@@ -134,11 +157,12 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
+                              {menuItem.submenu.map((submenuItem, subIndex) => (
                                 <Link
                                   href={submenuItem.path}
-                                  key={index}
+                                  key={subIndex}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-[#FF8C00] dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  onClick={closeMenu}
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -152,18 +176,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up hidden rounded-sm bg-[#FF8C00] px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link> */}
                 <div>
                   <ThemeToggler />
                 </div>

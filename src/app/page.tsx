@@ -10,25 +10,37 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import OurExperts from "@/components/experts/our-experts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KalaburagiTech | Innovative Software Solutions",
+  title: "KalaburagiTech | Innovative Software Solutions in Kalaburagi",
   description:
-    "KalaburagiTech provides cutting-edge software solutions for all your needs.",
-  keywords: "KalaburagiTech, Software Solutions, Web Development, Projects",
+    "KalaburagiTech provides cutting-edge software solutions and projects in Kalaburagi. Explore our web development services and expert team.",
+  keywords:
+    "KalaburagiTech, Software Solutions, Web Development, Projects, Kalaburagi, IT Services",
   openGraph: {
-    title: "KalaburagiTech | Innovative Software Solutions",
-    description: "Explore top-notch software solutions at KalaburagiTech.",
+    title: "KalaburagiTech | Leading Software Solutions in Kalaburagi",
+    description:
+      "Discover top-notch software solutions and projects at KalaburagiTech. Expert web development services in Kalaburagi.",
     url: "https://kalaburagitech.com",
+    siteName: "KalaburagiTech",
     images: [
       {
-        url: "homeimg.png",
-        width: 800,
-        height: 600,
-        alt: "KalaburagiTech Logo",
+        url: "https://kalaburagitech.com/about.png",
+        width: 1200,
+        height: 630,
+        alt: "KalaburagiTech - Software Solutions in Kalaburagi",
       },
     ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KalaburagiTech | Innovative Software Solutions in Kalaburagi",
+    description:
+      "Expert software development and IT services in Kalaburagi. Explore our projects and solutions.",
+    images: ["https://kalaburagitech.com/homeimg.png"],
   },
 };
 
