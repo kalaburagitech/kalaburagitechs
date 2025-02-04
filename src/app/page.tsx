@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import OurExperts from "@/components/experts/our-experts";
 import type { Metadata } from "next";
+import { SplashCursor } from "@/components/ui/splash-cursor";
 
 export const metadata: Metadata = {
   title: "KalaburagiTech | Innovative Software Solutions in Kalaburagi",
@@ -47,6 +48,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <SplashCursor />
       <ScrollUp />
       <Hero />
       <Features />
@@ -58,7 +60,7 @@ export default function Home() {
       <Pricing />
       <OurExperts />
       <Blog />
-      <Contact /> 
+      <Contact />
     </>
   );
 }
