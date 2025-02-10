@@ -22,11 +22,11 @@ const projects: Project[] = [
     demoLink: "https://kalaburagitech.com/servicespage",
   },
   {
-    name: "Corporate Website",
+    name: "MERN Stack Final Year Project | Student Letter Management System | Mini & Major IEEE Project 2025",
     description:
-      "A responsive corporate website with dynamic content management and contact forms.",
+      "IEEE Final Year Project, MERN Stack Project, Student Leave Letter Management.",
     category: "Web Application",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "oervNf7INrw",
     githubLink: "https://github.com/yourusername/corporate-website",
     demoLink: "https://kalaburagitech.com/servicespage",
   },
