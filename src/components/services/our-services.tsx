@@ -19,7 +19,7 @@ const projects: Project[] = [
     category: "Web Application",
     youtubeId: "mfG5Jl9xBLk",
     githubLink: "https://github.com/yourusername/ecommerce-platform",
-    demoLink: "https://kalaburagitech.com/servicespage",
+    demoLink: "https://pets-haven-one.vercel.app/",
   },
   {
     name: "MERN Stack Final Year Project | Student Letter Management System | Mini & Major IEEE Project 2025",
