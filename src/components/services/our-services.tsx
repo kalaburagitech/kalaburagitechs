@@ -13,11 +13,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "E-commerce Platform",
+    name: " MERN Stack Project | Pet Adoption & Donation Platform | Final Year IEEE Project | Web App 🚀",
     description:
-      "A full-featured online store with user authentication, product management, and payment integration.",
+      "🚀 Project Highlights: ✅ Adopt & Donate Pets – Find loving homes for animals!",
     category: "Web Application",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "9v0zfQaNagKxetcg",
     githubLink: "https://github.com/yourusername/ecommerce-platform",
     demoLink: "https://kalaburagitech.com/servicespage",
   },
