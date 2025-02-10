@@ -17,7 +17,7 @@ const projects: Project[] = [
     description:
       "🚀 Project Highlights: ✅ Adopt & Donate Pets – Find loving homes for animals!",
     category: "Web Application",
-    youtubeId: "9v0zfQaNagKxetcg",
+    youtubeId: "https://youtu.be/mfG5Jl9xBLk?si=9v0zfQaNagKxetcg",
     githubLink: "https://github.com/yourusername/ecommerce-platform",
     demoLink: "https://kalaburagitech.com/servicespage",
   },
