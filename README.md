@@ -9,7 +9,7 @@
 **KalaburagiTech** is a modern, feature-rich company website template built with **Next.js** and **Tailwind CSS**. Designed to showcase your business or SaaS services, this template includes all the essential pages and sections needed to effectively present your company online.
 
 ---
-
+----
 ### ✨ Key Features
 
 - **Crafted for Companies and SaaS Businesses**  
