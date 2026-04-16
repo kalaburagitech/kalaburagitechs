@@ -19,18 +19,18 @@ const NewsLatterBox = () => {
           type="text"
           name="name"
           placeholder="Enter your name"
-          className="mb-4 w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+          className="mb-4 w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="mb-4 w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+          className="mb-4 w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
         />
         <input
           type="submit"
           value="Subscribe"
-          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#FF8C00] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#FF8C00]/90 dark:shadow-submit-dark"
+          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#F97316] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#F97316]/90 dark:shadow-submit-dark"
         />
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           We respect your privacy. No spam, ever.
@@ -61,12 +61,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -97,12 +97,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -133,12 +133,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -187,11 +187,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#FF8C00" : "#fff"}
+                  stopColor={theme === "light" ? "#F97316" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>

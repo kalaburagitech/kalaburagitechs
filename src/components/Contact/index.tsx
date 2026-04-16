@@ -1,11 +1,21 @@
 "use client";  // Marking this component as a Client Component
 
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
+
+type ContactFormData = {
+  username: string;
+  email: string;
+  phone: string;
+  whatsapp: string;
+  projectName: string;
+  language: string;
+  description: string;
+};
 
 const Contact = () => {
   // State to hold form data
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     username: "",
     email: "",
     phone: "",
@@ -16,11 +26,13 @@ const Contact = () => {
   });
 
   // State to handle loading and success/error messages
-  const [statusMessage, setStatusMessage] = useState(null);
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   // Handle input change
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -29,7 +41,7 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Basic form validation (you can extend this based on your needs)
@@ -92,7 +104,7 @@ const Contact = () => {
               {statusMessage && (
                 <div
                   className={`mb-4 text-center ${
-                    statusMessage.includes("success") ? "text-green-500" : "text-red-500"
+                    statusMessage.includes("success") ? "text-[#F97316]" : "text-red-400"
                   }`}
                 >
                   {statusMessage}
@@ -116,7 +128,7 @@ const Contact = () => {
                         value={formData.username}
                         onChange={handleChange}
                         placeholder="Enter your name"
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -134,7 +146,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Enter your email"
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -152,7 +164,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Enter your phone"
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -170,7 +182,7 @@ const Contact = () => {
                         value={formData.whatsapp}
                         onChange={handleChange}
                         placeholder="Enter your WhatsApp"
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -188,7 +200,7 @@ const Contact = () => {
                         value={formData.projectName}
                         onChange={handleChange}
                         placeholder="Enter your project name"
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       />
                     </div>
                   </div>
@@ -204,7 +216,7 @@ const Contact = () => {
                         name="language"
                         value={formData.language}
                         onChange={handleChange}
-                        className="w-full rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       >
                         <option value="">Select a language</option>
                         <option value="C#">C#</option>
@@ -234,7 +246,7 @@ const Contact = () => {
                         value={formData.description}
                         onChange={handleChange}
                         placeholder="Describe your project"
-                        className="w-full resize-none rounded-sm border border-[#FF8C00] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#FF8C00] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#FF8C00] dark:focus:shadow-none"
+                        className="w-full resize-none rounded-sm border border-[#F97316] bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-[#F97316] dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-[#F97316] dark:focus:shadow-none"
                       ></textarea>
                     </div>
                   </div>
@@ -242,7 +254,7 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button
                       type="submit"
-                      className="rounded-sm bg-[#FF8C00] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#FF8C00]/90 dark:shadow-submit-dark"
+                      className="rounded-sm bg-[#F97316] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#F97316]/90 dark:shadow-submit-dark"
                       disabled={isLoading}
                     >
                       {isLoading ? "Sending..." : "Send Message"}

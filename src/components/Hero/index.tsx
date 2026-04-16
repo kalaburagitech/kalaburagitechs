@@ -16,16 +16,12 @@ const Hero = () => {
                   KalaburagiTech: Innovative Software Solutions from Bengaluru
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  KalaburagiTech is one of the best startup companies located in
-                  Bengaluru, offering a wide range of software development
-                  services. With our beautiful work environment and skilled
-                  team, we build and develop all types of software solutions to
-                  meet your business needs.
+                KalaburagiTech is a startup based in Bengaluru that builds software for web, mobile, and businesses. We create simple, reliable, and high-quality solutions that help companies grow and work better.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="#contact"
-                    className="rounded-sm bg-[#FF8C00] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#FF8C00]/80"
+                    className="rounded-sm bg-[#F97316] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#F97316]/80"
                   >
                     Get in Touch
                   </Link>

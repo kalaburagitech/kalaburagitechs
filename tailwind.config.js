@@ -38,14 +38,14 @@ module.exports = {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#121723",
-        dark: "#1D2430",
-        primary: "#4A6CF7",
+        black: "#0B1220",
+        dark: "#111827",
+        primary: "#F97316",
         yellow: "#FBB040",
-        "bg-color-dark": "#171C28",
+        "bg-color-dark": "#0B1220",
         "body-color": {
-          DEFAULT: "#788293",
-          dark: "#959CB1",
+          DEFAULT: "#6B7280",
+          dark: "#9CA3AF",
         },
         stroke: {
           stroke: "#E3E8EF",
@@ -53,8 +53,8 @@ module.exports = {
         },
         gray: {
           ...colors.gray,
-          dark: "#1E232E",
-          light: "#F0F2F9",
+          dark: "#111827",
+          light: "#F9FAFB",
         },
       },
 

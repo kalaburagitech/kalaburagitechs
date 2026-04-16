@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const StarIcon = () => (
   <svg
-    className="h-5 w-5 text-[#FF8C00]"
+    className="h-5 w-5 text-[#F97316]"
     fill="currentColor"
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +14,6 @@ const StarIcon = () => (
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   const { star, name, image, content, designation } = testimonial;
-
-  // Utility function to escape single/double quotes
-  const escapeQuotes = (str: string) => {
-    return str.replace(/'/g, "&apos;").replace(/"/g, "&quot;");
-  };
 
   return (
     <div className="w-full">
@@ -32,11 +27,11 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
           ))}
         </div>
         <p className="mb-8 border-b border-gray-200 pb-8 text-base leading-relaxed text-gray-600 dark:border-gray-700 dark:text-gray-300">
-          &ldquo;{escapeQuotes(content)}&rdquo;
+          &ldquo;{content}&rdquo;
         </p>
         <div className="flex items-center">
-          <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill />
+          <div className="relative mr-4 h-[50px] w-full max-w-[84px] overflow-hidden rounded-md border border-primary/25 bg-white p-1 dark:border-primary/25 dark:bg-[#111827]">
+            <Image src={image} alt={name} fill className="object-contain p-1" />
           </div>
           <div className="w-full">
             <h5 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white lg:text-base xl:text-lg">

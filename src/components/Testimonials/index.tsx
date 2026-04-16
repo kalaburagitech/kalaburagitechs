@@ -5,29 +5,47 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
-    designation: "CTO, TechInnovate Solutions",
+    name: "Shri Kukke Enterprises Pvt Ltd",
+    designation: "Enterprise Security Operations",
     content:
       "KalaburagiTech delivered an outstanding custom software solution that streamlined our operations. Their team's expertise and professionalism exceeded our expectations.",
-    image: "/images/testimonials/auth-01.png",
+    image: "/images/ourclints/shri_kukke.svg",
     star: 5,
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    designation: "Founder, EduTech Startup",
+    name: "Stalwart",
+    designation: "Biometric Infrastructure Team",
     content:
-      "The mobile app developed by KalaburagiTech has revolutionized our user engagement. Their innovative approach and attention to detail are truly commendable.",
-    image: "/images/testimonials/auth-02.png",
+      "The backend and biometric API infrastructure built by KalaburagiTech has transformed our system performance with reliable uptime and fast processing.",
+    image: "/images/ourclints/stalwart.svg",
     star: 5,
   },
   {
     id: 3,
-    name: "Amit Patel",
-    designation: "IT Director, Global Logistics Corp",
+    name: "24 FSS (Fire Safety Solutions)",
+    designation: "Digital Brand & Technology",
     content:
-      "KalaburagiTech's cloud integration services have significantly improved our data management and accessibility. Their ongoing support is invaluable to our operations.",
-    image: "/images/testimonials/auth-03.png",
+      "KalaburagiTech's secure web delivery and consulting support significantly improved our digital presence and technical confidence.",
+    image: "/images/ourclints/24fss.svg",
+    star: 5,
+  },
+  {
+    id: 4,
+    name: "Homeesta.in & Urban Lake Springs",
+    designation: "Real Estate Growth Team",
+    content:
+      "Their platform helped us manage listings and leads efficiently. The conversion-focused experience has made a visible business impact.",
+    image: "/images/ourclints/homeesta.svg",
+    star: 5,
+  },
+  {
+    id: 5,
+    name: "6Sigma",
+    designation: "Process Optimization Platform",
+    content:
+      "KalaburagiTech built a scalable analytics-driven platform that aligns perfectly with our quality and process improvement goals.",
+    image: "/images/ourclints/six_sigma.svg",
     star: 5,
   },
 ];
@@ -85,8 +103,8 @@ const Testimonials = () => {
               y2="459.865"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" />
-              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
+              <stop stopColor="#F97316" />
+              <stop offset="1" stopColor="#F97316" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_83:2"
@@ -96,8 +114,8 @@ const Testimonials = () => {
               y2="675.565"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" />
-              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
+              <stop stopColor="#F97316" />
+              <stop offset="1" stopColor="#F97316" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -137,8 +155,8 @@ const Testimonials = () => {
               y2="8.15715"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" stopOpacity="0" />
-              <stop offset="1" stopColor="#FF8C00" />
+              <stop stopColor="#F97316" stopOpacity="0" />
+              <stop offset="1" stopColor="#F97316" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_72:302"
@@ -148,8 +166,8 @@ const Testimonials = () => {
               y2="-2.84285"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" stopOpacity="0" />
-              <stop offset="1" stopColor="#FF8C00" />
+              <stop stopColor="#F97316" stopOpacity="0" />
+              <stop offset="1" stopColor="#F97316" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_72:302"
@@ -159,8 +177,8 @@ const Testimonials = () => {
               y2="19.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" stopOpacity="0" />
-              <stop offset="1" stopColor="#FF8C00" />
+              <stop stopColor="#F97316" stopOpacity="0" />
+              <stop offset="1" stopColor="#F97316" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_72:302"
@@ -170,8 +188,8 @@ const Testimonials = () => {
               y2="31.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FF8C00" stopOpacity="0" />
-              <stop offset="1" stopColor="#FF8C00" />
+              <stop stopColor="#F97316" stopOpacity="0" />
+              <stop offset="1" stopColor="#F97316" />
             </linearGradient>
           </defs>
         </svg>

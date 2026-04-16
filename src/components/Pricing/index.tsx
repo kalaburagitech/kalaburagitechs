@@ -1,158 +1,78 @@
 "use client";
-import { useState } from "react";
+
+import { Headset, Layers3, Workflow } from "lucide-react";
+import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
-import PricingBox from "./PricingBox";
+
+const engagementModels = [
+  {
+    id: 1,
+    icon: Workflow,
+    name: "Project-Based Delivery",
+    description:
+      "Focused on defined goals, fixed timelines, and high-quality launches like MVPs or Security Websites.",
+  },
+  {
+    id: 2,
+    icon: Layers3,
+    name: "Dedicated Development Team",
+    description:
+      "Best for long-term scaling (like our work for Shri Kukke Enterprises). Includes agile sprints and continuous feature integration.",
+    highlighted: true,
+  },
+  {
+    id: 3,
+    icon: Headset,
+    name: "Managed Services & Support",
+    description:
+      "Focused on 24/7 technical monitoring, cloud optimization (AWS/Azure), and ensuring 100% platform uptime.",
+  },
+];
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
-
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section
+      id="pricing"
+      className="relative z-10 overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#fff7ed] to-[#ffffff] py-16 dark:from-[#0B1220] dark:via-[#0f172a] dark:to-[#111827] md:py-20 lg:py-28"
+    >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.14),transparent_45%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.2),transparent_45%)]" />
+      <div className="container relative z-10">
         <SectionTitle
-          title="Flexible Pricing for Your Software Needs"
-          paragraph="Choose the perfect plan for your project. Whether you're a startup or an enterprise, we have a solution that fits your budget and requirements."
+          title="Our Engagement Models"
+          paragraph="Choose a delivery model that fits your business stage, goals, and growth plans."
           center
-          width="665px"
+          width="680px"
         />
 
-        <div className="w-full">
-          <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span
-              onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-[#FF8C00]"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
-            >
-              Monthly
-            </span>
-            <div
-              onClick={() => setIsMonthly(!isMonthly)}
-              className="flex cursor-pointer items-center"
-            >
-              <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
-                <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-[#FF8C00] transition`}
-                >
-                  <span className="active h-4 w-4 rounded-full bg-white"></span>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {engagementModels.map((model) => {
+            const Icon = model.icon;
+            return (
+              <div
+                key={model.id}
+                className={`rounded-2xl border p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 ${
+                  model.highlighted
+                    ? "border-primary/55 bg-gradient-to-br from-primary/20 via-[#fff1e8] to-white shadow-[0_18px_42px_rgba(249,115,22,0.2)] dark:from-primary/25 dark:via-[#2b1a12] dark:to-[#111827] dark:shadow-[0_22px_55px_rgba(249,115,22,0.28)]"
+                    : "border-primary/20 bg-white shadow-[0_14px_34px_rgba(11,18,32,0.1)] hover:border-primary/45 hover:shadow-[0_18px_44px_rgba(249,115,22,0.16)] dark:bg-[#111827] dark:shadow-[0_16px_40px_rgba(0,0,0,0.35)] dark:hover:border-primary/55 dark:hover:shadow-[0_22px_55px_rgba(249,115,22,0.2)]"
+                }`}
+              >
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary dark:border-white/20 dark:bg-black/20">
+                  <Icon size={22} />
                 </div>
+                <h3 className="mb-3 text-2xl font-bold text-black dark:text-white">{model.name}</h3>
+                <p className="mb-8 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                  {model.description}
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-base font-semibold text-white transition duration-300 hover:scale-[1.01] hover:shadow-[0_14px_32px_rgba(249,115,22,0.4)]"
+                >
+                  Request a Custom Quote
+                </Link>
               </div>
-            </div>
-            <span
-              onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-[#FF8C00]"
-              } ml-4 cursor-pointer text-base font-semibold`}
-            >
-              Yearly
-            </span>
-          </div>
+            );
+          })}
         </div>
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <PricingBox
-            packageName="Startup"
-            price={isMonthly ? "999" : "9999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Perfect for small teams and startups looking to establish their digital presence."
-          >
-            <OfferList text="Custom Web Application" status="active" />
-            <OfferList text="Responsive Design" status="active" />
-            <OfferList text="Basic SEO Optimization" status="active" />
-            <OfferList text="1 Month Free Maintenance" status="active" />
-            <OfferList text="24/7 Support" status="inactive" />
-            <OfferList text="Advanced Analytics" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Growth"
-            price={isMonthly ? "2999" : "29999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Ideal for growing businesses requiring more advanced features and support."
-          >
-            <OfferList text="Custom Web & Mobile Apps" status="active" />
-            <OfferList text="Advanced UI/UX Design" status="active" />
-            <OfferList text="E-commerce Integration" status="active" />
-            <OfferList text="3 Months Free Maintenance" status="active" />
-            <OfferList text="24/7 Priority Support" status="active" />
-            <OfferList text="Advanced Analytics" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Enterprise"
-            price={isMonthly ? "5999" : "59999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Comprehensive solution for large-scale enterprises with complex requirements."
-          >
-            <OfferList text="Custom Enterprise Solutions" status="active" />
-            <OfferList text="Multi-platform Development" status="active" />
-            <OfferList text="AI & ML Integration" status="active" />
-            <OfferList text="6 Months Free Maintenance" status="active" />
-            <OfferList text="24/7 Dedicated Support" status="active" />
-            <OfferList text="Advanced Analytics & Reporting" status="active" />
-          </PricingBox>
-        </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 z-[-1]">
-        <svg
-          width="239"
-          height="601"
-          viewBox="0 0 239 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="-184.451"
-            y="600.973"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
-          />
-          <rect
-            opacity="0.3"
-            x="-188.201"
-            y="385.272"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_93:235"
-              x1="-90.1184"
-              y1="420.414"
-              x2="-90.1184"
-              y2="1131.65"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#FF8C00" />
-              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_93:235"
-              x1="-159.441"
-              y1="204.714"
-              x2="-159.441"
-              y2="915.952"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#FF8C00" />
-              <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
       </div>
     </section>
   );

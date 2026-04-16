@@ -1,15 +1,13 @@
-type Author = {
-  name: string;
-  image: string;
-  designation: string;
+export type ClientFeature = {
+  title: string;
+  icon: "shield" | "map" | "layout" | "message" | "server" | "scan" | "database" | "globe" | "lock" | "life-buoy" | "building" | "users" | "sparkles";
 };
 
-export type Blog = {
+export type ClientProject = {
   id: number;
-  title: string;
-  paragraph: string;
-  image: string;
-  author: Author;
-  tags: string[];
-  publishDate: string;
+  clientName: string;
+  projectTitle: string;
+  solution: string;
+  features: ClientFeature[];
+  logo: string;
 };

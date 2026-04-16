@@ -1,57 +1,91 @@
-import { Blog } from "@/types/blog";
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+import { ClientProject } from "@/types/blog";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  Building2,
+  Database,
+  Globe,
+  LifeBuoy,
+  Lock,
+  MapPinned,
+  MessageSquareMore,
+  Radar,
+  Server,
+  ShieldCheck,
+  Sparkles,
+  SquareStack,
+  Users,
+} from "lucide-react";
+
+const iconMap = {
+  shield: ShieldCheck,
+  map: MapPinned,
+  layout: SquareStack,
+  message: MessageSquareMore,
+  server: Server,
+  scan: Radar,
+  database: Database,
+  globe: Globe,
+  lock: Lock,
+  "life-buoy": LifeBuoy,
+  building: Building2,
+  users: Users,
+  sparkles: Sparkles,
+};
+
+const SingleBlog = ({ blog, index }: { blog: ClientProject; index: number }) => {
   return (
-    <>
-      <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
-        <Link
-          href="/blog-details"
-          className="relative block aspect-[37/22] w-full"
-        >
-          <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
-            {tags[0]}
-          </span>
-          <Image src={image} alt="image" fill />
-        </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
-          <h3>
-            <Link
-              href="/blog-details"
-              className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
-            >
-              {title}
-            </Link>
-          </h3>
-          <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-            {paragraph}
+    <motion.article
+      initial={{ opacity: 0, y: 36 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.55, delay: 0.08 * index }}
+      whileHover={{ scale: 1.015, rotateX: -2, rotateY: 2 }}
+      className="group relative rounded-2xl border border-primary/20 bg-white p-6 shadow-[0_16px_36px_rgba(11,18,32,0.1)] backdrop-blur-xl transition-all duration-300 hover:border-primary/55 hover:shadow-[0_22px_48px_rgba(249,115,22,0.18)] dark:border-primary/25 dark:bg-[#111827] dark:shadow-[0_20px_45px_rgba(0,0,0,0.35)] dark:hover:border-primary/60 dark:hover:shadow-[0_28px_60px_rgba(249,115,22,0.2)] sm:p-8"
+    >
+      <div className="mb-6 flex items-center justify-between gap-4 border-b border-primary/20 pb-4">
+        <div>
+          <p className="text-xs uppercase tracking-[0.24em] text-body-color dark:text-body-color-dark">
+            Client
           </p>
-          <div className="flex items-center">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
-              <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image src={author.image} alt="author" fill />
-                </div>
-              </div>
-              <div className="w-full">
-                <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                  By {author.name}
-                </h4>
-                <p className="text-xs text-body-color">{author.designation}</p>
-              </div>
-            </div>
-            <div className="inline-block">
-              <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                Date
-              </h4>
-              <p className="text-xs text-body-color">{publishDate}</p>
-            </div>
-          </div>
+          <h3 className="mt-2 text-xl font-bold text-black dark:text-white">{blog.clientName}</h3>
+        </div>
+        <div className="flex h-14 min-w-[96px] items-center justify-center rounded-xl border border-primary/25 bg-white px-3">
+          <Image
+            src={blog.logo}
+            alt={blog.clientName}
+            width={92}
+            height={36}
+            className="h-9 w-auto object-contain"
+          />
         </div>
       </div>
-    </>
+
+      <h4 className="mb-3 text-lg font-semibold text-primary sm:text-xl">{blog.projectTitle}</h4>
+      <p className="mb-6 text-sm leading-relaxed text-body-color dark:text-body-color-dark sm:text-base">
+        {blog.solution}
+      </p>
+
+      <ul className="space-y-3">
+        {blog.features.map((feature) => {
+          const FeatureIcon = iconMap[feature.icon];
+          return (
+            <li key={feature.title} className="flex items-start gap-3 text-sm text-gray-700 dark:text-white/90 sm:text-base">
+              <motion.span
+                whileHover={{ scale: 1.08, y: -1 }}
+                transition={{ duration: 0.2 }}
+                className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-primary/60 bg-primary/20 text-primary"
+              >
+                <FeatureIcon size={15} />
+              </motion.span>
+              <span>{feature.title}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </motion.article>
   );
 };
 

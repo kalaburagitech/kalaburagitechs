@@ -13,8 +13,8 @@ const Video = () => {
     <section className="relative z-10 bg-gray-50 py-16 dark:bg-gray-900 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="See Our Expertise in Action"
-          paragraph="Watch our video to learn how KalaburagiTech can help transform your business with innovative software solutions."
+          title="Our Experts"
+          paragraph="Meet the skilled professionals behind KalaburagiTech who design, build, and deliver reliable digital solutions for your business."
           center
           mb="80px"
         />

@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <div className="flex items-center">
-                    <span className="text-2xl font-bold text-[#FF8C00]">
+                    <span className="text-2xl font-bold text-[#F97316]">
                       KALABURAGI
                     </span>
                     <span className="ml-1 text-2xl font-bold text-black dark:text-white">
@@ -30,7 +30,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-[#FF8C00] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-[#F97316] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -50,7 +50,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-[#FF8C00] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-[#F97316] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -72,7 +72,7 @@ const Footer = () => {
   aria-label="Instagram"
   target="_blank"
   rel="noopener noreferrer"
-  className="mr-6 text-[#FF8C00] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+  className="mr-6 text-[#F97316] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
 > 
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -91,7 +91,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#FF8C00] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-[#F97316] duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     <svg
                       width="17"
@@ -115,7 +115,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/services/web-development"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Web Development
                     </Link>
@@ -123,7 +123,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/services/mobile-apps"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Mobile Apps
                     </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/services/cloud-solutions"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Cloud Solutions
                     </Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       About Us
                     </Link>
@@ -157,7 +157,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Contact
                     </Link>
@@ -165,7 +165,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/careers"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Careers
                     </Link>
@@ -183,7 +183,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/faqs"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       FAQs
                     </Link>
@@ -191,7 +191,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/privacy-policy"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#FF8C00] dark:text-body-color-dark dark:hover:text-[#FF8C00]"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-[#F97316] dark:text-body-color-dark dark:hover:text-[#F97316]"
                     >
                       Privacy Policy
                     </Link>
@@ -209,7 +209,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#FF8C00] to-transparent dark:via-[#FF8C00]"></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#F97316] to-transparent dark:via-[#F97316]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
               © {new Date().getFullYear()} KalaburagiTech. All rights reserved.
@@ -224,7 +224,7 @@ const Footer = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#FF8C00" />
+            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#F97316" />
             <mask
               id="mask0_94:899"
               style={{ maskType: "alpha" }}
@@ -239,7 +239,7 @@ const Footer = () => {
                 cx="49.5"
                 cy="49.5"
                 r="49.5"
-                fill="#FF8C00"
+                fill="#F97316"
               />
             </mask>
             <g mask="url(#mask0_94:899)">
@@ -345,8 +345,8 @@ const Footer = () => {
                 y2="59.8878"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
+                <stop stopColor="#F97316" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94:889"
@@ -356,8 +356,8 @@ const Footer = () => {
                 y2="20.668"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0.51" />
+                <stop stopColor="#F97316" stopOpacity="0" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94:889"
@@ -367,8 +367,8 @@ const Footer = () => {
                 y2="25.1062"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
+                <stop stopColor="#F97316" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94:889"
@@ -378,8 +378,8 @@ const Footer = () => {
                 y2="80.6826"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0.51" />
+                <stop stopColor="#F97316" stopOpacity="0" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0.51" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94:889"
@@ -389,8 +389,8 @@ const Footer = () => {
                 y2="58.2156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0" />
+                <stop stopColor="#F97316" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_94:889"
@@ -400,8 +400,8 @@ const Footer = () => {
                 y2="41.6598"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#FF8C00" stopOpacity="0" />
-                <stop offset="1" stopColor="#FF8C00" stopOpacity="0.51" />
+                <stop stopColor="#F97316" stopOpacity="0" />
+                <stop offset="1" stopColor="#F97316" stopOpacity="0.51" />
               </linearGradient>
             </defs>
           </svg>

@@ -10,7 +10,7 @@ const checkIcon = (
 const AboutSectionOne = () => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-gray-600 dark:text-gray-300">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-[#FF8C00] bg-opacity-10 text-[#FF8C00]">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-[#F97316] bg-opacity-10 text-[#F97316]">
         {checkIcon}
       </span>
       {text}
@@ -52,10 +52,16 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/tech/handai.jpg"
                   alt="KalaburagiTech Team"
                   fill
-                  className="mx-auto max-w-full rounded-lg object-cover drop-shadow-three dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto block max-w-full rounded-lg object-cover drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                />
+                <Image
+                  src="/images/tech/handai.jpg"
+                  alt="KalaburagiTech Team"
+                  fill
+                  className="mx-auto hidden max-w-full rounded-lg object-cover dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
             </div>

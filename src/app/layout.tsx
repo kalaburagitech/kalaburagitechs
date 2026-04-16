@@ -26,7 +26,7 @@ export default function RootLayout({
         ogUrl="https://kalaburagitech.com"
         ogImage="https://kalaburagitech.com/about.png"
       />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-white text-black dark:bg-[#0B1220] dark:text-white ${inter.className}`}>
         <Providers>
           <Header />
           <main>{children}</main>
