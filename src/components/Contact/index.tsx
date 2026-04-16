@@ -54,13 +54,15 @@ const Contact = () => {
     setStatusMessage(null);
 
     try {
-      const response = await fetch("https://email-nny1.onrender.com/api/email-send", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+
+      const result = await response.json().catch(() => null);
 
       if (response.ok) {
         setStatusMessage("Message sent successfully!");
@@ -74,7 +76,11 @@ const Contact = () => {
           description: "",
         });
       } else {
-        setStatusMessage("Failed to send message.");
+        setStatusMessage(
+          result?.message
+            ? `Failed to send message: ${result.message}`
+            : "Failed to send message.",
+        );
       }
     } catch (error) {
       setStatusMessage("Error sending message.");
