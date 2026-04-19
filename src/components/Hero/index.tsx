@@ -13,10 +13,15 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  KalaburagiTech: Innovative Software Solutions from Bengaluru
+                  KalaburagiTech: software &amp; IT company for Kalaburagi,
+                  Gulbarga &amp; North Karnataka
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                KalaburagiTech is a startup based in Bengaluru that builds software for web, mobile, and businesses. We create simple, reliable, and high-quality solutions that help companies grow and work better.
+                  We are a technology company rooted in Kalaburagi—building web
+                  platforms, mobile apps, and custom software for startups,
+                  enterprises, colleges, healthcare, and public initiatives across
+                  Karnataka and India. Reliable delivery, clear communication, and
+                  engineering you can scale.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

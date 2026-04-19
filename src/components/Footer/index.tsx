@@ -20,9 +20,10 @@ const Footer = () => {
                   </div>
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  KalaburagiTech is a leading software development company based
-                  in Bengaluru, offering innovative solutions for businesses of
-                  all sizes.
+                  KalaburagiTech is a software development and IT services company
+                  in Kalaburagi (Gulbarga), Karnataka—serving North Karnataka and
+                  clients nationwide with web, mobile, cloud, and custom business
+                  technology.
                 </p>
                 <div className="flex items-center">
                   <a
